@@ -98,8 +98,8 @@ echo $TEST_FILES | tr ',' '\n'
 if [ $SECURITY_ENABLED = "true" ]
 then
    echo "run security enabled tests"
-   yarn cypress:run-with-security --browser chromium --spec "$TEST_FILES"
+   yarn cypress:run-with-security --browser electron --spec "$TEST_FILES"
 else
    echo "run security disabled tests"
-   yarn cypress:run-without-security --browser chromium --spec "$TEST_FILES"
+   yarn cypress:run-without-security --browser electron --spec "$TEST_FILES"
 fi
